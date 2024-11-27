@@ -5,8 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { submitVote } from '../api/api';
 import { setQuestionData, addAllData, removeAllData } from '../../redux/slices/formSlice';
 import { useRouter } from 'next/navigation';
-import { Textarea } from '@nextui-org/input';
-import { Button } from '@nextui-org/button';
+import { Button } from '@nextui-org/react';
 
 const ChoiceForm = () => {
     const dispatch = useDispatch();
