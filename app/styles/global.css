@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: #C5C3C6;
+}
+
+.button {
+    background-color: #1985A1;
+    color: #DCDCDD;
+    font-size: large;
+}
+
+.input {
+    max-width: 500px;
+    width: 500px;
+    font-size: calc(10px + 2vmin);
+}
+
+.textArea {
+    max-width: 500px;
+    width: 500px;
+    font-size: calc(10px + 2vmin);
+    color: #46494C;
+}
+
+.url {
+    color: #46494C;
+}
