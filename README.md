@@ -27,4 +27,4 @@ The Flask backend has been deployed using Render, which allows users to only nee
 
 If you are interested, the link to the API is [https://user-classifier-api.onrender.com](https://user-classifier-api.onrender.com)
 
-The repository for the deployed backend can be found here [https://user-classifier-api.onrender.com](https://user-classifier-api.onrender.com)
+The repository for the deployed backend can be found here [https://github.com/TashanManiyalaghan/user-classifier-api](https://github.com/TashanManiyalaghan/user-classifier-api)
