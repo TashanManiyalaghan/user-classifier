@@ -6,7 +6,7 @@ from openai import OpenAI
 from dotenv import load_dotenv
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
-from models.choices import db, Question, Choice
+from .models.choices import db, Question, Choice
 import re
 import os
 
@@ -96,11 +96,15 @@ def vote():
     choice = Choice.query.filter_by(id=optionID).first()
     choice.votes += 1
 
-    db.session.commit()
+    try:
+        db.session.commit()
 
-    data = Question.query.filter_by(url=choice.question_url).first()
+        data = Question.query.filter_by(url=choice.question_url).first()
 
-    return jsonify({'data': data.to_dict()}), 200
+        return jsonify({'data': data.to_dict()}), 200
+    except:
+        db.session.rollback()
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

@@ -1,5 +1,5 @@
 export const submitURL = async (url: string) => {
-    const response = await fetch(`http://127.0.0.1:5000/api/scrape`, {
+    const response = await fetch(`https://user-classifier-api.onrender.com/api/scrape`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -15,7 +15,7 @@ export const submitURL = async (url: string) => {
 };
 
 export const submitVote = async (id: number) => {
-    const response = await fetch(`http://127.0.0.1:5000/api/vote`, {
+    const response = await fetch(`https://user-classifier-api.onrender.com/api/vote`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

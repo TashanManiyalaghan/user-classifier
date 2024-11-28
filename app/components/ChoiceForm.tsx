@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { submitVote } from '../api/api';
-import { setQuestionData, addAllData, removeAllData } from '../../redux/slices/formSlice';
+import { addAllData, removeAllData } from '../../redux/slices/formSlice';
 import { useRouter } from 'next/navigation';
 import { Button } from '@nextui-org/react';
 
